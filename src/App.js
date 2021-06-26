@@ -1,4 +1,4 @@
-import ModalAlert from "./components/ModalAlert"
+import ModalAlert from "./components/modalAlert/modalAlert.jsx"
 import "./assets/css/index.css"
 
 function App() {

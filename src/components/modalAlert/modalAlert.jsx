@@ -1,5 +1,5 @@
 import React from 'react'
-import "../assets/css/modal.css"
+import "../../assets/css/modal.css"
 
 export default function ModalAlert() {
 	return (
@@ -9,3 +9,12 @@ export default function ModalAlert() {
 	)
 }
 
+
+// function(api){
+//     position1,position2,index
+//     =>
+//     componente nave
+//     =>{
+
+//     }
+// }
