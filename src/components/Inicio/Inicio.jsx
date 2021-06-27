@@ -1,66 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import Star from '../Star/Star';
-import GraphSensor from '../GraphSensor/GraphSensor';
-import TableSensor from '../TableSensor/TableSensor';
-import '../../assets/scss/components/inicio/inicio.scss';
+import React from "react"
+import Star from "../Star/Star"
+import GraphSensor from "../GraphSensor/GraphSensor"
+import TableSensor from "../TableSensor/TableSensor"
+import "../../assets/scss/components/inicio/inicio.scss"
 // import API from '../../jsonPrueba/prueba.json';
-import json from '../../data.json';
+import json from "../../data.json"
 
 const Inicio = () => {
-  const [datos, setDatos] = useState({});
-  const [datosDamage, setDatosDamage] = useState(0);
-  // const [data,]
+	let datosDamage = 0
+	let dataFilter
 
-  // const checkSensor = () => {
-  // };
-  const data = json.data;
-  const dataFilter = data.map((d, i) => {
-    return d;
-  });
+	const data = json.data
+	const checkSensor = () => {
+		dataFilter = data.map((d, i) => {
+			if (d.alert_damage) {
+				datosDamage++
+			}
 
-  useEffect(() => {
-    dataFilter.map((item, index) => {
-      if (item.alert_damage) {
-        console.log(index);
-        setDatosDamage(datosDamage + 1);
-      }
-    });
-  }, []);
-  // const data = Object.values(json);
-  // checkSensor();
-  const apiPrueba = 'https://pokeapi.co/api/v2/pokemon/ditto';
-  useEffect(() => {
-    pedirDatosApi();
-  }, []);
+			return d
+		})
+	}
 
-  const pedirDatosApi = async () => {
-    const responseApi = await fetch(apiPrueba);
-    const datosApi = await responseApi.json();
-    setDatos(datosApi);
-    // console.log(datosApi.base_experience);
-    // console.log(datosApi.order);
-    // console.log(datosApi)
-  };
+	checkSensor()
 
-  const totalNaves = data.length;
-  const navesAveriadas = datosDamage;
-  const calcularNavesAveriadas = (nTotal, nAveriadas) => {
-    const porcentajeNavesAveriadas = (nAveriadas * 100) / nTotal;
-    return porcentajeNavesAveriadas;
-  };
+	// const apiPrueba = "https://pokeapi.co/api/v2/pokemon/ditto"
+	// useEffect(() => {
+	// 	pedirDatosApi()
+	// }, [])
 
-  const navesAveriadasPorcentaje = calcularNavesAveriadas(
-    totalNaves,
-    navesAveriadas
-  );
+	// const pedirDatosApi = async () => {
+	// 	const responseApi = await fetch(apiPrueba)
+	// 	const datosApi = await responseApi.json()
+	// 	setDatos(datosApi)
+	// }
 
-  return (
-    <section className='inicio'>
-      <GraphSensor navesAveriadasPorcentaje={navesAveriadasPorcentaje} />
-      <Star />
-      <TableSensor data={dataFilter}></TableSensor>
-    </section>
-  );
-};
+	const totalNaves = data.length
+	const navesAveriadas = datosDamage
+	const calcularNavesAveriadas = (nTotal, nAveriadas) => {
+		const porcentajeNavesAveriadas = (nAveriadas * 100) / nTotal
+		return porcentajeNavesAveriadas
+	}
 
-export default Inicio;
+	const navesAveriadasPorcentaje = calcularNavesAveriadas(
+		totalNaves,
+		navesAveriadas
+	)
+
+	return (
+		<section className="inicio">
+			<GraphSensor navesAveriadasPorcentaje={navesAveriadasPorcentaje} />
+			<Star />
+			<TableSensor data={dataFilter}></TableSensor>
+		</section>
+	)
+}
+
+export default Inicio
