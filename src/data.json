@@ -1,14 +1,46 @@
 {
-	"data": [
-		{
-			"timestamp": "2021-06-25T21:21:34",
-			"sensor1": {
-				"ship": "(-|)",
+	"1": {
+		"alert_timestamp": "2021-06-25T21:21:34",
+		"alert_damage": true,
+		"alert_ship": false,
+		"data": [
+			{
+				"timestamp": "2021-06-25T21:21:34",
+				"ship": null,
 				"number": 88
 			},
-			"sensor2": "(-|88)",
-			"sensor3": "(-|48)"
-		}
-	],
-	"token": "8acbfd16-177a-4cc0-91d4-06276db8aaa0"
+			{
+				"timestamp": "2021-06-25T21:21:35",
+				"ship": "Bomber",
+				"number": 122
+			},
+			{
+				"timestamp": "2021-06-25T21:21:35",
+				"ship": "Bomber",
+				"number": 122
+			}
+		]
+	},
+	"2": {
+		"alert_timestamp": "2021-06-25T21:21:34",
+		"alert_damage": true,
+		"alert_ship": false,
+		"data": [
+			{
+				"timestamp": "2021-06-25T21:21:34",
+				"ship": null,
+				"number": 88
+			},
+			{
+				"timestamp": "2021-06-25T21:21:35",
+				"ship": "Bomber",
+				"number": 122
+			},
+			{
+				"timestamp": "2021-06-25T21:21:35",
+				"ship": "Bomber",
+				"number": 122
+			}
+		]
+	}
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Star from '../Star/Star';
 import GraphSensor from '../GraphSensor/GraphSensor';
+import TableSensor from "../TableSensor/TableSensor"
 import '../../assets/scss/components/inicio/inicio.scss';
 // import API from '../../jsonPrueba/prueba.json';
 
@@ -36,6 +37,7 @@ const Inicio = () => {
     <section className='inicio'>
       <GraphSensor navesAveriadasPorcentaje={navesAveriadasPorcentaje} />
       <Star />
+      <TableSensor></TableSensor>
     </section>
   );
 };

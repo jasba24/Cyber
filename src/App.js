@@ -1,14 +1,8 @@
-import Inicio from "./components/Inicio/Inicio"
-import TableBattle from "./components/TableBattle"
-import "./assets/scss/main.scss"
+import Inicio from './components/Inicio/Inicio';
+import './assets/scss/main.scss';
 
 function App() {
-	return (
-		<div>
-			<Inicio />
-      <TableBattle></TableBattle>
-		</div>
-	)
+  return <Inicio />;
 }
 
-export default App
+export default App;
