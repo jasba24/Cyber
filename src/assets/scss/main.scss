@@ -1,0 +1,11 @@
+@import './abstracts/variables';
+@import './components/inicio/inicio';
+@import './components/star/star';
+
+body,
+html {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+}

@@ -1,14 +1,8 @@
-import ModalAlert from "./components/modalAlert/modalAlert.jsx"
-import "./assets/css/index.css"
+import Inicio from './components/Inicio/Inicio';
+import './assets/scss/main.scss';
 
 function App() {
-	return (
-		<div className="App">
-			<ModalAlert>
-				Working
-			</ModalAlert>
-		</div>
-	)
+  return <Inicio />;
 }
 
-export default App
+export default App;
