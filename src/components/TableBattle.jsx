@@ -8,7 +8,12 @@ export default function TableBattle() {
 			<table>
 				<thead>
 					{data.map(d => (
-						<tr key={d}>{d}</tr>
+						<tr key={d}>
+							<td>{d.timestamp}</td>
+							{d.sensor1.number < 100 ? <td>No danger</td> : <td>Danger</td>}
+							{d.sensor2 > 100 ? <td>No danger</td> : <td>Danger</td>}
+							{d.sensor3 > 100 ? <td>No danger</td> : <td>Danger</td>}
+						</tr>
 					))}
 				</thead>
 				<tbody>

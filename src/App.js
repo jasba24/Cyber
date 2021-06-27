@@ -1,14 +1,8 @@
-import ModalAlert from "./components/ModalAlert"
-import "./assets/css/index.css"
-import TableBattle from "./components/TableBattle"
+import Inicio from './components/Inicio/Inicio';
+import './assets/scss/main.scss';
 
 function App() {
-	return (
-		<div className="App">
-			<ModalAlert></ModalAlert>
-			<TableBattle></TableBattle>
-		</div>
-	)
+  return <Inicio />;
 }
 
-export default App
+export default App;
