@@ -7,7 +7,7 @@ import '../../assets/scss/components/inicio/inicio.scss';
 import json from '../../data.json';
 
 const Inicio = () => {
-  // const [datos, setDatos] = useState({});
+  const [datos, setDatos] = useState({});
   const [datosDamage, setDatosDamage] = useState(0);
   // const [data,]
 

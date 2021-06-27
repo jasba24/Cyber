@@ -7,7 +7,7 @@ export default function TableSensor({ data }) {
       <thead className='tableSensor__head'>
         <tr>
           {data.map((dato, index) => (
-            <td key={index}>{dato.alert_damage}</td>
+            <td key={index}>{dato.alert_timestamp}</td>
           ))}
         </tr>
       </thead>
