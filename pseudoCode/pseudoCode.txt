@@ -89,3 +89,13 @@
 //   ],
 //   "token": "8acbfd16-177a-4cc0-91d4-06276db8aaa0"
 // }
+
+
+
+mapApi item=>{
+    item.index=18000
+    item.alert_damage = true,
+    item.alert__ship = false
+}
+{Sensor (item.index)}
+{item.alert__damage?`sensordamage o color rojo`:``}
