@@ -7,7 +7,7 @@ export default function TableSensor() {
 		const data = json.data
 		data.map((d, i) => {
 			if (d.alert_damage || d.alert_ship) {
-				return console.log(Object.keys(json));
+				return console.log(Object.keys(json))
 			}
 		})
 	}
@@ -16,11 +16,7 @@ export default function TableSensor() {
 	return (
 		<table className="tableSensor">
 			<thead className="tableSensor__head">
-				<tr>
-					{data[0].data.map((d, i) => (
-						<td key={i}>{d.timestamp}</td>
-					))}
-				</tr>
+				<tr></tr>
 			</thead>
 			<tbody className="tableSensor__body"></tbody>
 		</table>
