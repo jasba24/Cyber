@@ -7,7 +7,7 @@ export default function TableSensor() {
 		const data = json.data
 		data.map((d, i) => {
 			if (d.alert_damage || d.alert_ship) {
-				return console.log(Object.keys(json))
+				return console.log(d.id)
 			}
 		})
 	}
