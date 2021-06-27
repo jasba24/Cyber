@@ -17,7 +17,9 @@ export default function TableBattle() {
 					))}
 				</thead>
 				<tbody>
-					<tr>Result</tr>
+					<tr>
+						<td>Result</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
